@@ -1,10 +1,64 @@
 <html>
 <head>
     <title>Headlines</title>
+    <style>
+        html {
+            font-family: 'Helvetica';
+            background: whitesmoke;
+        }
+
+        body {
+            background: lightgrey;
+            max-width:900px
+            margin: 0 auto;
+        }
+
+        #header {
+            padding-top: 5;
+            background: lightsteelblue;
+
+        }
+        #inner-header{
+            padding-left: 10;
+
+        }
+        #main{
+            padding-left: 10;
+        }
+
+        input[type='text'], select{
+            color: grey;
+            border: 1px solid lightsteelblue;
+            height: 30px;
+            line-height:15px;
+            margin: 2px 6px 16px 0px;
+        }
+
+        input[type='submit'] {
+            padding: 5px 10px 5px 10px;
+            color: black;
+            background: lightsteelblue;
+            border: none;
+            -webkit-box-shadow: 1px 1px 1px 1px #4c6e91;
+            -moz-box-shadow: 1px 1px 1px 1px #4c6e91;
+            box-shadow: 1px 1px 1px 1px #4c6e91;
+        }
+
+        input[type='submit']:hover {
+            background: steelblue;
+        }
+    </style>
 </head>
 <body>
+<div id="header">
+<div id="inner-header">
 <h1>Headlines</h1>
-<h2>Current weather</h2>
+    <p>Headlines. Currency. Weather</p>
+</div>
+<hr/>
+</div>
+<div id="main">
+    <h2>Current weather</h2>
 <form>
     <input type="text" name="city" placeholder="weather search">
     <input type="submit" value="Submit">
@@ -39,5 +93,6 @@
 <p>{{article.summary}}</p>
 <hr/>
 {% endfor %}
+</div>
 </body>
 </html>
